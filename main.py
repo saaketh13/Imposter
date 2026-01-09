@@ -1,14 +1,15 @@
 import decks
 import random
 
-
-def show_roles(playercount):
+def show_roles(playercount, imposter_player_num, category, key, value):
     for i in range(playercount):
         player_num = i+1
-        # if player_num != imposter_player_num:
-            # print("Category: " + )
-        imposter_player_num = random.randint(1,playercount)
+        if player_num != imposter_player_num:
+            print("Player " + str(player_num) + ": Category: " + category + " Word: " + key)
+        else:
+             print("Player " + str(player_num) + ": Imposter! Your hint is: " + value)
         
+
 def get_category(category):
     if category in decks.master_deck:
             return decks.master_deck[category]
@@ -29,7 +30,8 @@ def main():
     key, value = pick_key_value(category_deck)
     print("Word: " + key)
     print("Hint: " + value)
-    
+    imposter_player_num = random.randint(1,playercount)
+    show_roles(playercount, imposter_player_num, category, key, value)
 
 if __name__ == "__main__":
     main()
