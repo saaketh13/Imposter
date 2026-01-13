@@ -22,9 +22,9 @@ animals_deck = {
     "Kangaroo": "Pouch",
     "Panda": "Bamboo",
     "Dolphin": "Intelligent",
-    "Eagle": "Soar",
-    "Penguin": "Tuxedo"
-
+    "Eagle": "United States",
+    "Penguin": "Tuxedo",
+    "Monkey": "Curious"
 }
 
 master_deck = {
